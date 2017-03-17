@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         Intent myIntent = new Intent(MainActivity.this, SubActivity.class);
         myIntent.putExtra("sendValue", myString);
         startActivityForResult(myIntent, 0);
-        //startActivity(myIntent);
+        //startActivity(myIntent);   
     }
 
     @Override
