@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.shinhan.linearlayout.sub1">
+
+    <!-- 1-0 line -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:background="#ff00"
+            android:text="TEXT1-1"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="#ffff"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:background="#2200ff"
+            android:text="TEXT1-2"
+            android:gravity="right|center_vertical"/>
+    </LinearLayout>
+
+    <!-- 2-0 line -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:orientation="horizontal">
+        <!-- 2-1 line -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:text="TEXT2-1"
+            android:background="#00ff08"/>
+        <!-- 2-2 line -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="60"
+            android:orientation="vertical" >
+            <!-- 2-2-1 line -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="50"
+                android:text="TEXT2-2-1"
+                android:background="#6f00ff"/>
+            <!-- 2-2-2 line -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="50"
+                android:text="TEXT2-2-2"
+                android:background="#ffcc00"/>
+        </LinearLayout>
+        <!-- 2-3 line -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:text="TEXT2-3"
+            android:background="#00ffdd"/>
+    </LinearLayout>
+
+    <!-- 3-0 line -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageview1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:background="@drawable/krw_bill" />
+
+        <ImageView
+            android:id="@+id/imageview2"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="match_parent"
+            android:background="@drawable/dollor_bill"/>
+    </LinearLayout>
+
+    <!-- 4-0 line -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:gravity="center">
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:onClick="onButtonClicked"
+            android:text="Button1" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_toRightOf="@id/button1"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:onClick="onButtonClicked"
+            android:text="Button2" />
+    </RelativeLayout>
+
+</LinearLayout>
